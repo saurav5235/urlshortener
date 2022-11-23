@@ -50,7 +50,7 @@
 		public static void main(String[] args) 
 		{
 			Class.forName("org.sqlite.JDBC");
-		con = DriverManager.getConnection("jdbc:sqlite:C://sqlite//URLSHORTNER.db");
+			con = DriverManager.getConnection("jdbc:sqlite:C://sqlite//URLSHORTNER.db");
 
 			while(True)
 			{
