@@ -13,35 +13,35 @@
 			String shortURL = "tinyurl"+count;
 			count++;
 			String q1 = "insert into URLSHORTNER values('" +url+ "', '" +shortURL+"')";
-		int x = stmt.executeUpdate(q1);
-		if (x > 0)           
-		    System.out.println("SHORT URL Successfully created");           
-		else           
-		    System.out.println("creation of SHORT URL failed");
+			int x = stmt.executeUpdate(q1);
+			if (x > 0)           
+			    System.out.println("SHORT URL Successfully created");           
+			else           
+			    System.out.println("creation of SHORT URL failed");
 		}
 
 		String get(String url)
 		{
 			Statement stmt = con.createStatement();
 			String q1 = "select * from URLSHORTNER WHERE url = '" + url + "'";
-		ResultSet rs = stmt.executeQuery(q1);
+			ResultSet rs = stmt.executeQuery(q1);
 
-		if (rs.next())
-		    return rs.getString(2);
-		else
-		    return "No such short url present for the given url";
+			if (rs.next())
+			    return rs.getString(2);
+			else
+			    return "No such short url present for the given url";
 		}
 
 		void delete(String url)
 		{
 			Statement stmt = con.createStatement();
 			String q1 = "DELETE from URLSHORTNER WHERE url = '" + url + "'";
-		int x = stmt.executeUpdate(q1);
+			int x = stmt.executeUpdate(q1);
 
-		if (x > 0)           
-		    System.out.println("Successfully Deleted");           
-		else
-		    System.out.println("NOT Deleted"); 
+			if (x > 0)           
+			    System.out.println("Successfully Deleted");           
+			else
+			    System.out.println("NOT Deleted"); 
 		}
 	}
 
