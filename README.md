@@ -51,7 +51,8 @@
 		{
 			Class.forName("org.sqlite.JDBC");
 			con = DriverManager.getConnection("jdbc:sqlite:C://sqlite//URLSHORTNER.db");
-
+			Scanner sc = new Scanner(System.in);
+			
 			while(True)
 			{
 				System.out.println("1.ADD URL");
